@@ -164,21 +164,22 @@ export default function Scrollytelling() {
 
 function StoryBlock({ opacity, y, title, subtitle, cta }: any) {
   return (
-    <motion.div style={{
-      opacity, y,
-      position: "absolute",
-      top: "50%",
-      left: "12%",
-      transform: "translateY(-50%)",
-      maxWidth: "420px",
-      display: "flex",
-      flexDirection: "column",
-      gap: "18px"
-    }}>
-      <h2 style={{ fontSize: "3.5rem", fontWeight: 300, color: "var(--text-primary)", lineHeight: 1.1, letterSpacing: "-0.03em" }}>
+    <motion.div 
+      className="story-block-container"
+      style={{
+        opacity, y,
+        position: "absolute",
+        top: "50%",
+        transform: "translateY(-50%)",
+        display: "flex",
+        flexDirection: "column",
+        gap: "18px"
+      }}
+    >
+      <h2 className="story-title" style={{ fontWeight: 300, color: "var(--text-primary)", letterSpacing: "-0.03em" }}>
         {title}
       </h2>
-      <p style={{ fontSize: "1.1rem", color: "var(--text-secondary)", fontWeight: 400, letterSpacing: "0.01em" }}>
+      <p className="story-subtitle" style={{ color: "var(--text-secondary)", fontWeight: 400, letterSpacing: "0.01em" }}>
         {subtitle}
       </p>
       {cta && (
