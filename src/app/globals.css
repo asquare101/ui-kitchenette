@@ -1,0 +1,71 @@
+:root {
+  --bg-color: #FDF8F5;
+  --bg-secondary: #F4EBE6;
+  --text-primary: #2C2523;
+  --text-secondary: #5C4F49;
+  --accent-primary: #D96C4A;
+  --accent-secondary: #9DBA94;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.lux-btn {
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+.lux-btn:hover {
+  background-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 108, 74, 0.3);
+}
+
+/* Hide scrollbar for extreme minimal feel, though scrollytelling still works */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E0D5C1;
+}
